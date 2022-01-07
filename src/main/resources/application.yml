@@ -1,0 +1,24 @@
+spring:
+  thymeleaf:
+    mode: HTML
+    encoding: UTF-8
+    cache: false
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_blog?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/**Mapper.xml
+  configLocation: classpath:mybatis/config/mybatis-config.xml
+
+server:
+  port: 5200
+
+
+
+
+
+

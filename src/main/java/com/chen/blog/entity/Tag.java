@@ -1,0 +1,44 @@
+package com.chen.blog.entity;
+
+/**
+ * @author ChenYi
+ * @corporation HongYang_software
+ * @create 2022-01-07
+ */
+public class Tag {
+    /**
+     * 标签ID
+     */
+    private Integer id;
+    /**
+     * 标签名称
+     */
+    private String tagName;
+
+    public Tag() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getTagName() {
+        return tagName;
+    }
+
+    public void setTagName(String tagName) {
+        this.tagName = tagName;
+    }
+
+    @Override
+    public String toString() {
+        return "Tag{" +
+                "id=" + id +
+                ", tagName='" + tagName + '\'' +
+                '}';
+    }
+}

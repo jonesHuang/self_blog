@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--移动端配置-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>博客详情</title>
+    <!-- 配置semantic的css文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css">
+    <link rel="stylesheet" href="../static//css/typo.css">
+    <!--自定义css样式-->
+    <link rel="stylesheet" href="../static/css/myStyle.css">
+
+
+</head>
+<body>
+    <!-- 导航 -->
+    <nav class="ui inverted segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">
+                    Blog For Chen
+                </h2>
+                <a href="#" class="item m-item m-mobile-hide"><i class="paper plane icon"></i>首页</a>
+                <a href="#" class="item m-item m-mobile-hide"><i class="list icon"></i>分类</a>
+                <a href="#" class="item m-item m-mobile-hide"><i class="paperclip icon"></i>标签</a>
+                <a href="#" class="item m-item m-mobile-hide"><i class="calendar icon"></i>标签</a>
+                <a href="#" class="item m-item m-mobile-hide"><i class="heartbeat icon"></i>关于我</a>
+                <div class="right m-item item m-mobile-hide">
+                    <div class="ui  icon inverted transparent input ">
+                        <input type="text" placeholder="Search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu black icon button m-right-top m-mobile-show" id="show_menu">
+            <i class="bars icon"></i>
+        </a>
+    </nav>
+    <!-- 内容 -->
+    <div class="js-toc-content m-container-small m-padded-tb-large" id="waypointer">
+        <div class="ui container">
+            <!-- head-->
+            <div class="ui top attached segment">
+                <div class="ui horizontal link list">
+                    <div class="item">
+                        <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                        <div class="content"><a href="#" class="header">辰逸呀</a></div>
+                    </div>
+                    <div class="item">
+                        <i class="calendar icon"></i>2021-10-18
+                    </div>
+                    <div class="item">
+                        <i class="eye icon"></i>2020
+                    </div>
+
+                </div>
+            </div>
+            <!--img area-->
+            <div class="ui attached segment">
+                <img src="https://unsplash.it/800/450?image=1025" alt="" class="ui fluid rounded image">
+            </div>
+            <!-- content area-->
+            <div class="ui  attached padded segment">
+                <div class="ui right aligned basic segment">
+                    <div class="ui orange basic label ">原创</div>
+                </div>
+                <h2 class="ui center aligned header">
+                    About The Title
+                </h2>
+                <div id="content" class="m-padded-tb-large m-padded-lr-responsive">
+                    <h1 id="param_1">First para</h1>
+                    <p>I never spend much time in school but I taught ladies plenty. It’s true I hire my body out for pay, hey hey. I’ve gotten burned over Cheryl Tiegs, blown up for Raquel Welch. But when I end up in the hay it’s only hay, hey hey. I might jump an open drawbridge, or Tarzan from a vine. ’Cause I’m the unknown stuntman that makes Eastwood look so fine.</p><br>
+                    <h1 id="param_2">Second para</h1>
+                    <p>Barnaby The Bear’s my name, never call me Jack or James, I will sing my way to fame, Barnaby the Bear’s my name. Birds taught me to sing, when they took me to their king, first I had to fly, in the sky so high so high, so high so high so high, so — if you want to sing this way, think of what you’d like to say, add a tune and you will see, just how easy it can be. Treacle pudding, fish and chips, fizzy drinks and liquorice, flowers, rivers, sand and sea, snowflakes and the stars are free.</p><br>
+                    <h1 id="param_3">Third para</h1>
+                    <p>This is my boss, Jonathan Hart, a self-made millionaire, he’s quite a guy. This is Mrs H., she’s gorgeous, she’s one lady who knows how to take care of herself. By the way, my name is Max. I take care of both of them, which ain’t easy, ’cause when they met it was MURDER!</p><br>
+                    <h1 id="param_4">Fourth para</h1>
+                    <p>Ulysses, Ulysses — Soaring through all the galaxies. In search of Earth, flying in to the night. Ulysses, Ulysses — Fighting evil and tyranny, with all his power, and with all of his might. Ulysses — no-one else can do the things you do. Ulysses — like a bolt of thunder from the blue. Ulysses — always fighting all the evil forces bringing peace and justice to all.</p><br>
+                    <h1 id="param_5">Fifth para</h1>
+                    <p>Thundercats are on the move, Thundercats are loose. Feel the magic, hear the roar, Thundercats are loose. Thunder, thunder, thunder, Thundercats! Thunder, thunder, thunder, Thundercats! Thunder, thunder, thunder, Thundercats! Thunder, thunder, thunder, Thundercats! Thundercats! </p><br>
+                </div>
+                <!-- tag -->
+                <div class="m-padded-lr">
+                    <div class="ui basic teal left pointing label">方法论</div>
+                </div>
+                <!-- prase -->
+                <div class="ui center aligned basic segment">
+                    <button class="ui orange basic circular button" id="praseBtn">赞赏</button>
+                </div>
+                <div class="ui flowing popup transition hidden praseBoard">
+                    <div class="ui orange basic label">
+                        <div class="ui images" style="font-size: inherit;">
+                            <div class="image">
+                                <img src="./static/img/weixin.jpg" alt="" class="ui rounded bordered image" style="max-width: 120px;">
+                                 <div>微信</div>
+                            </div>
+                            <div class="image">
+                                <img src="./static/img/weixin.jpg" alt="" class="ui rounded bordered image" style="max-width: 120px;">
+                                <div>微信</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--blog Msg-->
+            <div class="ui attached positive message">
+                <div class="ui middle aligned grid">
+                    <div class="eleven wide column">
+                        <ui class="list">
+                            <li>作者：辰逸</li>
+                            <li>发表日期：2022-01-05</li>
+                            <li>版权声明：自由转载-非商用</li>
+                            <li>公众号转载：请在文末添加作者公众号</li>
+                        </ui>
+                    </div>
+                    <div class="five wide column">
+                        <img src="./static/img/weixin.jpg" alt="" class="ui rounded bordered image" style="max-width: 120px;">
+                    </div>
+                </div>
+            </div>
+            <!--comment area-->
+            <div class="ui bottom attached segment">
+                <!-- 留言区域列表 -->
+                <div class="ui teal segment" id="comments-container">
+                    <div class="ui threaded comments">
+                        <h3 class="ui dividing header" style="user-select: auto;">Comments</h3>
+                        <div class="comment" style="user-select: auto;">
+                          <a class="avatar" style="user-select: auto;">
+                            <img src="./static/img/head.jpg"user-select: auto;">
+                          </a>
+                          <div class="content" style="user-select: auto;">
+                            <a class="author" style="user-select: auto;">Matt</a>
+                            <div class="metadata" style="user-select: auto;">
+                              <span class="date" style="user-select: auto;">Today at 5:42PM</span>
+                            </div>
+                            <div class="text" style="user-select: auto;">
+                              How artistic!
+                            </div>
+                            <div class="actions" style="user-select: auto;">
+                              <a class="reply" style="user-select: auto;">Reply</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="comment" style="user-select: auto;">
+                          <a class="avatar" style="user-select: auto;">
+                            <img src="./static/img/head.jpg" style="user-select: auto;">
+                          </a>
+                          <div class="content" style="user-select: auto;">
+                            <a class="author" style="user-select: auto;">Elliot Fu</a>
+                            <div class="metadata" style="user-select: auto;">
+                              <span class="date" style="user-select: auto;">Yesterday at 12:30AM</span>
+                            </div>
+                            <div class="text" style="user-select: auto;">
+                              <p style="user-select: auto;">This has been very useful for my research. Thanks as well!</p>
+                            </div>
+                            <div class="actions" style="user-select: auto;">
+                              <a class="reply" style="user-select: auto;">Reply</a>
+                            </div>
+                          </div>
+                          <div class="comments" style="user-select: auto;">
+                            <div class="comment" style="user-select: auto;">
+                              <a class="avatar" style="user-select: auto;">
+                                <img src="./static/img/head.jpg" style="user-select: auto;">
+                              </a>
+                              <div class="content" style="user-select: auto;">
+                                <a class="author" style="user-select: auto;">Jenny Hess</a>
+                                <div class="metadata" style="user-select: auto;">
+                                  <span class="date" style="user-select: auto;">Just now</span>
+                                </div>
+                                <div class="text" style="user-select: auto;">
+                                  Elliot you are always so right :)
+                                </div>
+                                <div class="actions" style="user-select: auto;">
+                                  <a class="reply" style="user-select: auto;">Reply</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="comment" style="user-select: auto;">
+                          <a class="avatar" style="user-select: auto;">
+                            <img src="./static/img/head.jpg" style="user-select: auto;">
+                          </a>
+                          <div class="content" style="user-select: auto;">
+                            <a class="author" style="user-select: auto;">Joe Henderson</a>
+                            <div class="metadata" style="user-select: auto;">
+                              <span class="date" style="user-select: auto;">5 days ago</span>
+                            </div>
+                            <div class="text" style="user-select: auto;">
+                              Dude, this is awesome. Thanks so much
+                            </div>
+                            <div class="actions" style="user-select: auto;">
+                              <a class="reply" style="user-select: auto;">Reply</a>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                </div>
+                <div class="ui form">
+
+                    <form class="ui reply form" style="user-select: auto;">
+                      <div class="field" style="user-select: auto;">
+                        <textarea style="user-select: auto; margin-top: 0px; margin-bottom: 0px; height: 150px;" placeholder="请输入...."></textarea>
+                      </div>
+                      <div class="fields">
+                          <div class="field m-mobile-wide m-margin-tb-small">
+                              <div class="ui left icon input">
+                                  <i class="user icon"></i>
+                                  <input type="text" name="nickname" placeholder="姓名"/>
+                              </div>
+                          </div>
+                          <div class="field m-mobile-wide m-margin-tb-small">
+                            <div class="ui left icon input">
+                                <i class="mail icon"></i>
+                                <input type="text" name="email" placeholder="邮箱"/>
+                            </div>
+                          </div>
+                          <div class="field m-mobile-wide m-margin-tb-small">
+                            <button class="ui teal button" style="width: 100%;">
+                                <i class="edit icon"></i>
+                                发布
+                            </button>
+                          </div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="toolbar" class="m-padded-large m-fixed m-right-bottom vis-act" style="z-index: 999;display:none;">
+        <div class="ui vertical icon buttons" >
+            <button  class="ui teal button" id="menuBtn">目录</button>
+            <a  href="#comments-container" class="ui teal button">留言</a>
+            <a href="" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
+            <div href="" class="ui icon button" id="topBtn"><i class="chevron up icon"></i></div>
+        </div>
+        <div id="qrcode" class="ui wechat-qr flowing popup transition hidden"></div>
+        <div class="ui flowing popup transition hidden menuPoup" style="width: 300px;">
+            <div class="js-toc">
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 底部 -->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned  container">
+            <div class="ui inverted divided mobile reversed  stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="./static/img/weixin.jpg" class="ui rounded image" style="width: 120px">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="three wide  column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">
+                        Latest Msg
+                    </h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">First</a>
+                        <a href="#" class="item">Second</a>
+                        <a href="#" class="item">Third</a>
+                        <a href="#" class="item">Fourth</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">
+                        联系我
+                    </h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Email：540832433@qq.com</a>
+                        <a href="#" class="item">QQ:540832433</a>
+
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">
+                        Latest Msg
+                    </h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">
+                        This is about me,just me,real me
+                    </p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-mini">CopyRightΘ2021-2022 Blog Design for ChenYi</p>
+        </div>
+    </footer>
+
+
+<!-- 引入jquery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<!-- 配置semantic的js文件 -->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="../static/lib/tocbot/tocbot.min.js"></script>
+<script src="../static/lib/qrcode/qrcode.min.js"></script>
+<script src="../static/lib/waypoint/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js"></script>
+    <script>
+        $("#show_menu").click(function (){
+            $('.m-item').toggleClass('m-mobile-hide');
+        })
+
+        $("#praseBtn").popup({
+            popup:$('.praseBoard.popup'),
+            on:'click',
+            position:'bottom center'
+        })
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.js-toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.js-toc-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+        $("#menuBtn").popup({
+            popup:$('.menuPoup.popup'),
+            on:'click',
+            position:'left center'
+        })
+
+        $(".wechat").popup({
+            popup:$('.wechat-qr'),
+            position:'top center'
+        })
+        var qrcode = new QRCode("qrcode", {
+            text: "http://jindo.dev.naver.com/collie",
+            width: 128,
+            height: 128,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+        $("#topBtn").click(()=>{
+            $(window).scrollTo(0,500);
+        })
+        var waypoint = new Waypoint({
+            element: document.getElementById('waypointer'),
+            handler: function(direction) {
+                if(direction==="down"){
+                    $("#toolbar").show(200)
+                }else{
+                    $("#toolbar").hide(200)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

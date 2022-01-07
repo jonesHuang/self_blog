@@ -1,0 +1,55 @@
+.toc {
+    overflow-y: auto
+}
+
+.toc>.toc-list {
+    overflow: hidden;
+    position: relative
+}
+
+.toc>.toc-list li {
+    list-style: none
+}
+
+.toc-list {
+    margin: 0;
+    padding-left: 10px
+}
+
+.toc-list li a{
+    display: block;
+    padding: 4px 0;
+    font-weight: 300;
+     padding: 4px 0;
+     transition: all .3s;
+     text-decoration: none;
+}
+.toc-list li a:hover{
+    color: rgb(0, 181, 173);
+    font-weight: 500;
+    font-size: 20px;
+}
+a.toc-link {
+    color: currentColor;
+    height: 100%
+}
+
+.is-collapsible {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: all 300ms ease-in-out
+}
+
+.is-collapsed {
+    max-height: 0
+}
+
+.is-position-fixed {
+    position: fixed !important;
+    top: 0
+}
+.toc-list li a.is-active-link{
+    color: rgb(0, 181, 173);
+    font-weight: 500;
+    font-size: 20px;
+}
